@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<head>
+<script src="/assets/jquery.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Raleway:300,200' rel='stylesheet' type='text/css'>
+<style>
+body {
+  font-family: helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  background: #ffffff;
+}
+div {
+  height: 200px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  font-size: 75px;
+  color: #777;
+  margin: 60px 0 0 0;
+  text-transform: uppercase;
+}
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  text-align: center;
+  color: #888;
+  margin: 0px 0 70px 0;
+}
+p {
+  font-family: 'Raleway', sans-serif;
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 100px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+.first{
+  background-image: url("https://couturemakeup.files.wordpress.com/2013/03/8115031142_4fc124ffa8_o.jpg");
+}
+.second{
+  background-image: url("http://data1.whicdn.com/images/51691211/blog_makefor_colares_271_gr_large.jpg");
+}
+.dessert{
+  background-image: url("http://cdn.buzznet.com/assets/users16/annamazing/default/girly-sprinkled-donuts-xo--large-msg-132970013995.jpg");
+}
+.price {
+  float: right;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 16px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 15px;
+    line-height: 20px;
+  }
+  small {
+    font-size: 11px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+<h1>Paula Lucci</h1>
+<h2>a SoCal-based web developer</h2>
+<div class="first">
+  <p>pink peonies <span class="price">$14</span><br />
+  <small>These beautiful flowers are for the more mature and feminine gal. Hyped up by Blair Waldorf and Tumblr addicts, this new "It" flower is taking the stage. </small></p>
+</div>
+
+<div class="second">
+  <p>statement necklace <span class="price">$22</span><br />
+  <small>A classy outfit is not complete without a beautiful, sparkling statement necklace. This is the attention-seeking icing-on-the-cake.</small></p>
+</div>
+  
+<div class="dessert">
+  <p>donuts <span class="price">$8</span><br />
+  <small>Girly frosted donuts with the cutest sprinkles you've ever seen. These babies are sure to woo even the most determined dieter.</small></p>
+</div>
+
+<script>
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+</script>
+
+</body>
